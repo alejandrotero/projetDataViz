@@ -1,4 +1,3 @@
-import { getOriginalData }  from "./original";
 import { getData } from "./store";
 import d3 from "d3";
 import jQuery from "jquery";
