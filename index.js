@@ -48,7 +48,7 @@ console.log('Our CSV data in index', treeData);
     });
     nodeEnter.append("circle").attr("r", 1e-6).style("fill", function(d) {
       if (d._children) {
-        return "lightsteelblue";
+        return "#ddd";
       } else {
         return "#fff";
       }
@@ -74,7 +74,7 @@ console.log('Our CSV data in index', treeData);
     });
     nodeUpdate.select("circle").attr("r", 5).style("fill", function(d) {
       if (d._children) {
-        return "black";
+        return "ddd";
       } else {
         return "black";
       }

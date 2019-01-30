@@ -4,7 +4,12 @@
 
 	.node circle {
 	  fill: #fff;
-	  stroke: steelblue;
+	  stroke: red;
+	  stroke-width: 3px;
+	}
+	.node circle {
+	  fill: #ddd;
+	  stroke: blue;
 	  stroke-width: 3px;
 	}
 

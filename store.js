@@ -21,7 +21,7 @@ export function getData(func){
 function putDataInFormat(datos){
 	//console.log('Our CSV data avant format', datos);
 	const data=[];
-	data.push(newDomain(datos[0].ecole,[]));
+	data.push(newDomain('IMT Atlantique',[]));
 	var domains = data[0].children;
 	for (var i = 0; i < datos.length; ++i) {
 		var article = newArticle(datos[i].name,datos[i].size);
