@@ -1,0 +1,14 @@
+name;ecole;domain;subdomain;theme;size
+megapequeno1;IMT;AAA;BBB;politique;433
+megapequeno2;IMT;AAA;BBB;politique;455
+megapequeno3;IMT;AAA;BBB;politique;211
+megapequeno1;IMT;AAA;BBB;CCC;433
+megapequeno2;IMT;AAA;BBB;DDD;455
+megapequeno3;IMT;AA;BBB;GGG;211
+megapequeno1;IMT;AA;BBB;CCC;433
+megapequeno2;IMT;AA;BBB;DDD;455
+megapequeno3;IMT;AA;BB;GGG;211
+megapequeno3;IMT;AA;BB;GGG;211
+megapequeno1;IMT;AA;BB;CCC;433
+megapequeno2;IMT;AA;BB;DDD;455
+megapequeno3;IMT;AA;BB;GGG;211

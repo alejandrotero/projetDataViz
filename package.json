@@ -1,0 +1,20 @@
+{
+  "name": "projet_data_visualisation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "d3": "^3.5.17",
+    "jquery": "^3.3.1",
+    "papaparse": "^4.6.3",
+    "parcel-bundler": "^1.11.0",
+    "underscore": "^1.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AOS",
+  "license": "ISC"
+}
