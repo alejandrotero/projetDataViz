@@ -9,6 +9,8 @@ function principal(){
 	getData(createGraph);
 }
 
+var color = d3.scale.category10();
+
 function createGraph(treeData) {
   var  construct_generations, diagonal, diameter, div, duration, height, i, radius, reconstruct_ancestors, reform_focus, root, store_and_update, svg, tree, //treeData, 
   update, zoom;
@@ -47,12 +49,14 @@ console.log('Our CSV data in index', treeData);
       }
     });
     nodeEnter.append("circle").attr("r", 1e-6).style("fill", function(d) {
-      if (d._children) {
-        return "#ddd";
-      } else {
-        return "#fff";
-      }
+    	//Aqui no cambia
+    if (isNaN(d.size)) {
+    	return color(d.size);
+    } else {
+    	return "black";
+    }
     });
+    
     nodeEnter.append("text").attr("dy", ".31em").attr("text-anchor", function(d) {
       if (d.x < 180) {
         return "start";
@@ -73,12 +77,38 @@ console.log('Our CSV data in index', treeData);
       return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")";
     });
     nodeUpdate.select("circle").attr("r", 5).style("fill", function(d) {
-      if (d._children) {
-        return "ddd";
-      } else {
-        return "black";
-      }
+    //Aqui cambia
+    if (isNaN(d.size)) {
+    	return color(d.size);
+    } else {
+    	return "black";
+    }
     });
+	nodeUpdate.select("circle").attr("r", function(d) {
+    	//Aqui cambia
+    if (isNaN(d.size)) {
+    	return 5;
+    } else {
+    	return d.size/100;
+    }
+    });
+	nodeUpdate.select("text").style("font-size", function(d) {
+		//console.log(nodeUpdate.select("text").attr("font"));
+		var number;
+		if (d.depth==0) {
+			number=12;
+		} else if (d.depth==1) {
+			number=10;
+		}else if (d.depth==2) {
+			number=9;
+		} else if (d.depth==3) {
+			number=8;
+		} else {
+			number=8;
+		}
+      return number+'px';
+    });
+
     nodeUpdate.select("text").style("fill-opacity", 1).attr("dy", ".31em").attr("text-anchor", function(d) {
       if (d.x < 180) {
         return "start";
@@ -197,7 +227,7 @@ console.log('Our CSV data in index', treeData);
     return reform_focus();
   });
 
-  diameter = 720;
+  diameter = 750;
 
   height = diameter - 150;
 
